@@ -1,11 +1,16 @@
 import React from 'react'
 
-function Navigation() {
+function Navigation(props) {
+    const {
+        aboutSelected,
+        setAboutSelected
+    } = props;
+
     return (
         <nav>
         <ul>
           <li>
-            <a href="#about">About</a>
+            <a href='#about' onClick={() => setAboutSelected(true)}>About</a>
           </li>
           <li>
             <a href="#contact">Contact</a>
